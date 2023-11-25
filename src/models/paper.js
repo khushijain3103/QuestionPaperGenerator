@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const paperSchema = new Schema({
-
     subject : {
         type : String,
         required : true
@@ -31,7 +30,6 @@ const paperSchema = new Schema({
 
         required : true
     }
-
 });
 
 module.exports = mongoose.model('Paper' , paperSchema);

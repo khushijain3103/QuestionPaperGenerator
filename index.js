@@ -1,24 +1,6 @@
-const mongoose = require('mongoose');
+const app = require("./app");
+require("dotenv").config();
 
-const express = require('express');
-const app = express();
+const port = process.env.PORT || 3000;
 
-require('dotenv').config();
-
-const paperRoute = require('./routes/paper')
-
-
-app.use('/' , paperRoute);
-
-mongoose.connect(process.env.URI).then(
-    result => {
-        app.listen(3000 , console.log("Server is running on 3000"));
-    }
-).catch(
-    err => {
-        console.log(err);
-    }
-);
-
-
-
+app.listen(port, () => console.log(`Server is up on port ${port}`));
