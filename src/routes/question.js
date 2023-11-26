@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { createQuestionPaper } = require("../controllers/question");
+const { createQuestionPaper } = require("../controllers");
 
 router.get("/create-paper", createQuestionPaper);
 
