@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+const { createQuestionPaper } = require("../controllers/question");
 
-//30 marks easy
+router.get("/create-paper", createQuestionPaper);
 
-router.get();
-
-// router.post();
+module.exports = router;
